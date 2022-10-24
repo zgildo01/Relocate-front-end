@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -17,13 +17,16 @@ import WishLists from './pages/WishLists/WishList'
 
 // services
 import * as authService from './services/authService'
+import * as wishlistService from './services/wishlistService'
 
 // styles
 import './App.css'
 
+
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [wishlist, setWishlist] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -34,6 +37,14 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  useEffect(() => {
+    const fetchAllWishLists = async () => {
+      const data = await wishlistService.index()
+      setWishlist(data)
+    }
+    if (user) fetchAllWishLists()
+  }, [user])
 
   return (
     <>
@@ -84,7 +95,7 @@ const App = () => {
           path='/wishlist'
           element={
             <ProtectedRoute user={user}>
-              <WishLists />
+              <WishLists wishlist={wishlist}/>
             </ProtectedRoute>
           }
         />
