@@ -12,8 +12,16 @@ const Landing = ({ user }) => {
         <div>
           <p>to-do List</p>
           <p>to-do list view placeholder</p>
-          <button>create new to-do list</button>
-          <button>view all to-do list</button>
+          <Link
+            to="/create-todolist"
+          >
+            <button>create new to-do list</button>
+          </Link>
+          <Link
+            to="/todolists"
+          >
+            <button>view all to-do list</button>
+          </Link>
         </div>
 
         <div>
