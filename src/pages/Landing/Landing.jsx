@@ -27,8 +27,12 @@ const Landing = ({ user }) => {
         <div>
           <p>Wishlist List</p>
           <p>wishlistlist view placeholder</p>
-          <button><Link to='/create-wishlist'>create a new wishlist</Link></button>
-          <button><Link to='/wishlist'>view all wishlists</Link></button>
+          <Link to='/create-wishlist'>
+            <button>create a new wishlist</button>
+          </Link>
+          <Link to='/wishlist'>
+            <button>view all wishlists</button>
+          </Link>
         </div>
       </>
     :
