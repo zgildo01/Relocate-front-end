@@ -13,11 +13,13 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import TodoLists from './pages/TodoLists/TodoLists'
-import WishLists from './pages/WishLists/WishList'
+import WishLists from './pages/WishLists/WishLists'
+import TodoListForm from './pages/TodoListForm/TodoListForm'
 
 // services
 import * as authService from './services/authService'
 import * as wishlistService from './services/wishlistService'
+import * as todolistService from './services/todoListService'
 
 // styles
 import './App.css'
@@ -27,6 +29,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   const [wishlist, setWishlist] = useState([])
+  const [todolist, setTodoList] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -43,7 +46,14 @@ const App = () => {
       const data = await wishlistService.index()
       setWishlist(data)
     }
-    if (user) fetchAllWishLists()
+    const fetchAllTodoLists = async () => {
+      const data = await todolistService.index()
+      setTodoList(data)
+    }
+    if (user) {
+      fetchAllWishLists()
+      fetchAllTodoLists()
+    }
   }, [user])
 
   return (
@@ -79,7 +89,7 @@ const App = () => {
           path='/create-todolist'
           element={
             <ProtectedRoute user={user}>
-              <TodoLists />
+              <TodoListForm />
             </ProtectedRoute>
           }
         />
@@ -87,7 +97,7 @@ const App = () => {
           path='/todolists'
           element={
             <ProtectedRoute user={user}>
-              <TodoLists />
+              <TodoLists todolist={todolist}/>
             </ProtectedRoute>
           }
         />
