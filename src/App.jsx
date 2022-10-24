@@ -13,6 +13,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
+import WishList from './pages/WishList/WishList'
+
 // services
 import * as authService from './services/authService'
 
@@ -62,9 +64,31 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+
+
+
+
+
+
+
+
+<Route
+  path='/'
+  element={
+    <ProtectedRoute user={user}>
+      <WishList />
+    </ProtectedRoute>
+  }
+/>
       </Routes>
     </>
   )
 }
+
+
+
+
+
+
 
 export default App
