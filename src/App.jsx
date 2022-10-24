@@ -62,6 +62,9 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route 
+          path='/'
+        />
       </Routes>
     </>
   )
