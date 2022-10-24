@@ -11,10 +11,7 @@ const NavBar = ({ user, handleLogout }) => {
           <li><Link to="/changePassword">Change Password</Link></li>
         </ul>
       :
-        <ul>
-          <li><Link to="/login">Log In</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
-        </ul>
+        <p></p>
       }
     </nav>
   )

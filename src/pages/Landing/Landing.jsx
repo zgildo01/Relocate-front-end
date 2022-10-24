@@ -5,11 +5,11 @@ const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
     {user ?
-      <p>yes</p>
+      <p>Welcome back, {user.name}</p>
     :
-    <>
-      <div className='welcome-statement'> 
-          <img></img>
+      <>
+        <div className='welcome-statement'> 
+            
           <h2> Giving you peace of mind every step of the way. Worry Less. Enjoy More.</h2>
           <h2>We make moving easier.</h2>
         </div>
@@ -35,12 +35,19 @@ const Landing = ({ user }) => {
               <li>Upload a floor plan and add dimensions for each room</li>
             </ul>
           </div>
-          <p>..... and others. Explore Relocate. </p>
+          <p>... and others. <b>Explore Relocate.</b> </p>
         </div>
 
-        <Link to="/login">Log In</Link>
-        <Link to="/signup">Sign Up</Link>
-        </>
+        <div className='login-div'>
+          <p>Already have an account?</p>
+          <button><Link to="/login">Log In</Link></button>
+        </div>
+
+        <div className='sign-up-div'>
+          <p>New to Relocate?</p>
+          <button><Link to="/signup">Sign Up</Link></button>
+        </div>
+      </>
     }
     </main>
   )
