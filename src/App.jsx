@@ -12,6 +12,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import TodoLists from './pages/TodoLists/TodoLists'
+import WishLists from './pages/WishLists/WishList'
 
 // services
 import * as authService from './services/authService'
@@ -62,9 +64,47 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route 
+          path='/create-todolist'
+          element={
+            <ProtectedRoute user={user}>
+              <TodoLists />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path='/todolists'
+          element={
+            <ProtectedRoute user={user}>
+              <TodoLists />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/wishlist'
+          element={
+            <ProtectedRoute user={user}>
+              <WishLists />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/create-wishlist'
+          element={
+            <ProtectedRoute user={user}>
+              <WishLists />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
   )
 }
+
+
+
+
+
+
 
 export default App
