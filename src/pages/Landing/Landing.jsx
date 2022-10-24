@@ -5,13 +5,40 @@ const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
     {user ?
-      <p>Welcome back, {user.name}</p>
+      <>
+        <p>Welcome, {user.name}</p>
+        <p>Countdown placeholder</p>
+
+        <div>
+          <p>to-do List</p>
+          <p>to-do list view placeholder</p>
+          <button>create new to-do list</button>
+          <button>view all to-do list</button>
+        </div>
+
+        <div>
+          <p>to-do List</p>
+          <p>to-do list view placeholder</p>
+          <button>create new to-do list</button>
+          <button>view all to-do list</button>
+        </div>
+      </>
     :
       <>
         <div className='welcome-statement'> 
             
           <h2> Giving you peace of mind every step of the way. Worry Less. Enjoy More.</h2>
           <h2>We make moving easier.</h2>
+        </div>
+
+        <div className='login-div'>
+          <p>Already have an account?</p>
+          <button><Link to="/login">Log In</Link></button>
+        </div>
+
+        <div className='sign-up-div'>
+          <p>New to Relocate?</p>
+          <button><Link to="/signup">Sign Up</Link></button>
         </div>
 
         <div className='about-relocate'>
@@ -36,16 +63,6 @@ const Landing = ({ user }) => {
             </ul>
           </div>
           <p>... and others. <b>Explore Relocate.</b> </p>
-        </div>
-
-        <div className='login-div'>
-          <p>Already have an account?</p>
-          <button><Link to="/login">Log In</Link></button>
-        </div>
-
-        <div className='sign-up-div'>
-          <p>New to Relocate?</p>
-          <button><Link to="/signup">Sign Up</Link></button>
         </div>
       </>
     }
