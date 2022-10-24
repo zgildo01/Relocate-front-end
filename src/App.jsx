@@ -72,6 +72,16 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+
+        <Route 
+          path='/todolists'
+          element={
+            <ProtectedRoute user={user}>
+              <TodoList />
+            </ProtectedRoute>
+          }
+        />
+        
       </Routes>
     </>
   )
