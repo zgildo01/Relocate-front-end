@@ -13,7 +13,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import TodoLists from './pages/TodoLists/TodoLists'
-import WishLists from './pages/WishLists/WishList'
+import WishLists from './pages/WishLists/WishLists'
 
 // services
 import * as authService from './services/authService'
