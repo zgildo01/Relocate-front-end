@@ -1,6 +1,6 @@
 import styles from './TodoListDetails.module.css'
 
-const TodoListForm = () => {
+const TodoListDetails = () => {
   return (
     <>
       <main>
@@ -10,4 +10,4 @@ const TodoListForm = () => {
   );
 }
 
-export default TodoListForm;
+export default TodoListDetails;
