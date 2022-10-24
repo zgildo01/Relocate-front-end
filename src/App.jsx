@@ -12,6 +12,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import TodoList from './pages/TodoList/TodoList'
+
 
 // services
 import * as authService from './services/authService'
@@ -63,7 +65,12 @@ const App = () => {
           }
         />
         <Route 
-          path='/'
+          path='/todolists'
+          element={
+            <ProtectedRoute user={user}>
+              <TodoList />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </>
