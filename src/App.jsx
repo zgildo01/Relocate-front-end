@@ -133,6 +133,14 @@ const App = () => {
           }
         />
         <Route 
+          path='/wishlists/:id'
+          element={
+            <ProtectedRoute user={user}>
+              <WishLists />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
           path="/todolists/:id"
           element={
             <ProtectedRoute user={user}>
