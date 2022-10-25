@@ -16,6 +16,7 @@ import TodoLists from './pages/TodoLists/TodoLists'
 import WishLists from './pages/WishLists/WishLists'
 import TodoListForm from './pages/TodoListForm/TodoListForm'
 import TodoDetails from './pages/TodoDetails/TodoDetails'
+import EditTodoList from './pages/EditTodoList/EditTodoList'
 
 // services
 import * as authService from './services/authService'
@@ -53,7 +54,7 @@ const App = () => {
   const handleUpdateTodoList = async (todoData) => {
     const updatedList = await todolistService.update(todoData)
     setTodoLists(todolists.map((l) => todoData._id === l._id ? updatedList : l))
-    navigate('/')
+    navigate('/todolists')
   }
 
   useEffect(() => {
@@ -148,6 +149,11 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/todolists/:id/edit" element={
+        <ProtectedRoute user={user}>
+          <EditTodoList handleUpdateBlog={handleUpdateTodoList} />
+        </ProtectedRoute>
+} />
       </Routes>
     </>
   )

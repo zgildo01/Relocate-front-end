@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from './TodoDetails.module.css'
 
 import * as todolistService from '../../services/todoListService'
@@ -26,6 +26,12 @@ const TodoDetails = (props) => {
           <h1>{todolist.name}</h1>
         </header>
         <p>{todolist.details}</p>
+        <Link to={`/todolists/${id}/edit`} state={todolist}>
+          <button>Edit</button>
+        </Link>
+        <Link>
+          <button>Delete</button>
+        </Link>
       </article>
       <section>
         <h1>Todolist Items</h1>

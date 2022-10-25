@@ -1,10 +1,10 @@
-import styles from './TodoListForm.module.css'
+import styles from './EditTodoList.module.css'
 import { useLocation } from 'react-router-dom'
 import { useState } from "react"
 
 const EditTodoList = (props) => {
   const { state } = useLocation()
-  const [form, setForm] = useState()
+  const [form, setForm] = useState(state)
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -18,6 +18,7 @@ const EditTodoList = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
+        <h1>Edit To-Do List</h1>
         <label htmlFor="name-input">Edit Name</label>
         <input
           required
