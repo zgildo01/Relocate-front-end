@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import TodoLists from './pages/TodoLists/TodoLists'
 import WishLists from './pages/WishLists/WishLists'
 import TodoListForm from './pages/TodoListForm/TodoListForm'
+import TodoDetails from './pages/TodoDetails/TodoDetails'
 
 // services
 import * as authService from './services/authService'
@@ -39,6 +40,12 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleAddBlog = async (todoData) => {
+    const newList = await todolistService.create(todoData)
+    setTodoList([newList, ...todolist])
+    navigate('/todolists')
   }
 
   useEffect(() => {
@@ -102,7 +109,7 @@ const App = () => {
           }
         />
         <Route
-          path='/wishlist'
+          path='/wishlists'
           element={
             <ProtectedRoute user={user}>
               <WishLists wishlist={wishlist}/>
@@ -114,6 +121,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <WishLists />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/todolists/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <TodoDetails user={user} />
             </ProtectedRoute>
           }
         />
