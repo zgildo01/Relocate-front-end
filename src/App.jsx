@@ -68,8 +68,6 @@ const App = () => {
     if (user) {
       fetchAllWishLists()
       fetchAllTodoLists()
-    } else if (!user) {
-      
     }
   }, [user])
   
