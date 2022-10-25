@@ -3,7 +3,7 @@ import styles from './TodoCard.module.css'
 
 const TodoCard = ({ todolist }) => {
   return (
-    <Link to={`/todolist/${todolist._id}`}>
+    <Link to={`/todolists/${todolist._id}`}>
       <article className={styles.container}>
         <header>
           <span>

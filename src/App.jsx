@@ -50,6 +50,12 @@ const App = () => {
     navigate('/todolists')
   }
 
+  const handleUpdateTodoList = async (todoData) => {
+    const updatedList = await todolistService.update(todoData)
+    setTodoLists(todolists.map((l) => todoData._id === l._id ? updatedList : l))
+    navigate('/')
+  }
+
   useEffect(() => {
     const fetchAllWishLists = async () => {
       const data = await wishlistService.index()
@@ -100,7 +106,7 @@ const App = () => {
           path='/create-todolist'
           element={
             <ProtectedRoute user={user}>
-              <TodoListForm />
+              <TodoListForm handleAddTodoList={handleAddTodoList}/>
             </ProtectedRoute>
           }
         />

@@ -19,17 +19,22 @@ const TodoDetails = (props) => {
   console.log('Todolist State:', todolist)
 
   return (
-    <main className={styles.container}>
+    todolist ? 
+      <main className={styles.container}>
       <article>
         <header>
-          <h1>{props.todolist.name}</h1>
+          <h1>{todolist.name}</h1>
         </header>
-        <p>{props.todolist.details}</p>
+        <p>{todolist.details}</p>
       </article>
       <section>
         <h1>Todolist Items</h1>
       </section>
     </main>
+    :
+    <>
+      <p>Loading...</p>
+    </>
   );
 }
 
