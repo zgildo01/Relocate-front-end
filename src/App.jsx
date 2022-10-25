@@ -28,7 +28,7 @@ import './App.css'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
-  const [wishlist, setWishlist] = useState([])
+  const [wishlist, setWishlist] = useState(null)
   const [todolist, setTodoList] = useState([])
 
   const handleLogout = () => {
@@ -45,17 +45,25 @@ const App = () => {
     const fetchAllWishLists = async () => {
       const data = await wishlistService.index()
       setWishlist(data)
+      console.log(data)
     }
     const fetchAllTodoLists = async () => {
       const data = await todolistService.index()
       setTodoList(data)
     }
+    console.log(user)
     if (user) {
       fetchAllWishLists()
       fetchAllTodoLists()
+      console.log('is running')
+    } else if (!user) {
+      console.warn('no user logged in, refer to file WishLists.jsx for troubleshooting')
     }
   }, [user])
-
+  console.log("this is wishlist", wishlist)
+  console.log('this is todolist', todolist)
+  useEffect(() => console.log(wishlist, '***'), [wishlist])
+  
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
