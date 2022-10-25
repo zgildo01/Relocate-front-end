@@ -100,7 +100,7 @@ const App = () => {
           path='/create-todolist'
           element={
             <ProtectedRoute user={user}>
-              <TodoListForm />
+              <TodoListForm handleAddTodoList={handleAddTodoList}/>
             </ProtectedRoute>
           }
         />
