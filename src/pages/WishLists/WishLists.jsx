@@ -1,19 +1,13 @@
 import styles from './WishLists.module.css'
+import WishCard from '../../components/WishlistCard/WishlistCard'
 
 const WishLists = (props) => {
 
-  console.log(props)
-  console.log(props)
-
   return (
     <main className={styles.container}>
-      {props.wishlist?.map((wishlist) => (
-        <p key={wishlist._id}>
-          {wishlist.name}
-          Wishlists
-        </p>
-      ))}
-      <h1>hlep</h1>
+      {props.wishlists?.map((wishlist) => (
+        <WishCard key={wishlist._id} wishlist={wishlist}/>
+        ))}
     </main>
   )
 }
