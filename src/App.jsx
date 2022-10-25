@@ -57,6 +57,12 @@ const App = () => {
     navigate('/todolists')
   }
 
+  const handleDeleteTodoList = async (id) => {
+    const deletedList = await todolistService.deleteList(id)
+    setTodoLists(todolists.filter(l => l._id !== deletedList._id))
+    navigate('/todolists')
+  }
+
   useEffect(() => {
     const fetchAllWishLists = async () => {
       const data = await wishlistService.index()
@@ -145,15 +151,17 @@ const App = () => {
           path="/todolists/:id"
           element={
             <ProtectedRoute user={user}>
-              <TodoDetails user={user} />
+              <TodoDetails user={user} handleDeleteTodoList={handleDeleteTodoList} />
             </ProtectedRoute>
           }
         />
-        <Route path="/todolists/:id/edit" element={
-        <ProtectedRoute user={user}>
-          <EditTodoList handleUpdateBlog={handleUpdateTodoList} />
-        </ProtectedRoute>
-} />
+        <Route
+          path="/todolists/:id/edit" 
+          element={
+            <ProtectedRoute user={user}>
+              <EditTodoList handleUpdateBlog={handleUpdateTodoList} />
+            </ProtectedRoute>
+        } />
       </Routes>
     </>
   )
