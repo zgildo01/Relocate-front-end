@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import TodoLists from './pages/TodoLists/TodoLists'
 import WishLists from './pages/WishLists/WishLists'
 import TodoListForm from './pages/TodoListForm/TodoListForm'
+import TodoDetails from './pages/TodoDetails/TodoDetails'
 
 // services
 import * as authService from './services/authService'
@@ -29,7 +30,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   const [wishlist, setWishlist] = useState([])
-  const [todolist, setTodoList] = useState([])
+  const [todolists, setTodoLists] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -41,6 +42,12 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleAddBlog = async (todoData) => {
+    const newList = await todolistService.create(todoData)
+    setTodoLists([newList, ...todolists])
+    navigate('/todolists')
+  }
+
   useEffect(() => {
     const fetchAllWishLists = async () => {
       const data = await wishlistService.index()
@@ -48,7 +55,7 @@ const App = () => {
     }
     const fetchAllTodoLists = async () => {
       const data = await todolistService.index()
-      setTodoList(data)
+      setTodoLists(data)
     }
     if (user) {
       fetchAllWishLists()
@@ -97,12 +104,12 @@ const App = () => {
           path='/todolists'
           element={
             <ProtectedRoute user={user}>
-              <TodoLists todolist={todolist}/>
+              <TodoLists todolists={todolists}/>
             </ProtectedRoute>
           }
         />
         <Route
-          path='/wishlist'
+          path='/wishlists'
           element={
             <ProtectedRoute user={user}>
               <WishLists wishlist={wishlist}/>
@@ -114,6 +121,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <WishLists />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/todolists/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <TodoDetails user={user} />
             </ProtectedRoute>
           }
         />
