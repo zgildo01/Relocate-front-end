@@ -2,15 +2,37 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin-bottom: 50px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .label,
 .button {
   margin-right: 0.5rem;
+  text-decoration: none;
 }
 
 .inputContainer {
   margin-bottom: 1rem;
+}
+
+.buttonContainer {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: grid;
+}
+
+a {
+  text-decoration: none;
 }

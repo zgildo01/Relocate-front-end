@@ -9,7 +9,7 @@ const NavBar = ({ user, handleLogout }) => {
           <li><Link to="/changePassword">Change Password</Link></li>
         </ul>
       :
-        <p></p>
+        <></>
       }
     </nav>
   )
