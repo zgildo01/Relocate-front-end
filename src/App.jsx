@@ -30,7 +30,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   const [wishlist, setWishlist] = useState([])
-  const [todolist, setTodoList] = useState([])
+  const [todolists, setTodoLists] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -44,7 +44,7 @@ const App = () => {
 
   const handleAddBlog = async (todoData) => {
     const newList = await todolistService.create(todoData)
-    setTodoList([newList, ...todolist])
+    setTodoLists([newList, ...todolists])
     navigate('/todolists')
   }
 
@@ -55,7 +55,7 @@ const App = () => {
     }
     const fetchAllTodoLists = async () => {
       const data = await todolistService.index()
-      setTodoList(data)
+      setTodoLists(data)
     }
     if (user) {
       fetchAllWishLists()
@@ -104,7 +104,7 @@ const App = () => {
           path='/todolists'
           element={
             <ProtectedRoute user={user}>
-              <TodoLists todolist={todolist}/>
+              <TodoLists todolists={todolists}/>
             </ProtectedRoute>
           }
         />

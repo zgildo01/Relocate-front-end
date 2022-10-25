@@ -1,6 +1,7 @@
 import styles from './WishLists.module.css'
 
 const WishLists = (props) => {
+  console.log(props)
   return (
     <main className={styles.container}>
       {props.wishlists.map((wishlist) => (

@@ -1,11 +1,11 @@
 import styles from './TodoListForm.module.css'
 import { useState } from "react"
 
-const NewBlog = (props) => {
+const TodoListForm = (props) => {
   const [form, setForm] = useState({
-    title: '',
-    text: '',
-    category: 'News',
+    name: '',
+    date: '',
+    details: '',
   })
 
   const handleChange = ({ target }) => {
@@ -20,45 +20,40 @@ const NewBlog = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title-input">Title</label>
+        <label htmlFor="name-input">Name</label>
         <input
           required
           type="text"
-          name="title"
-          id="title-input"
-          value={form.title}
-          placeholder="Title"
+          name="name"
+          id="name-input"
+          value={form.name}
+          placeholder="To-do List Name"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Text</label>
+        <label htmlFor="details-input">Details</label>
 				<textarea
           required
           type="text"
-          name="text"
-          id="text-input"
-          value={form.text}
-          placeholder="Text"
+          name="details"
+          id="details-input"
+          value={form.details}
+          placeholder="To-do Details"
           onChange={handleChange}
         />
-        <label htmlFor="category-input">Category</label>
-        <select
+        <label htmlFor="date-input">Date</label>
+        <input
           required
-          name="category"
-          id="category-input"
-          value={form.category}
+          type="date"
+          name="date"
+          id="date-input"
+          value={form.date}
+          placeholder="To-do List Name"
           onChange={handleChange}
-        >
-          <option value="News">News</option>
-          <option value="Games">Games</option>
-          <option value="Music">Music</option>
-          <option value="Movies">Movies</option>
-          <option value="Sports">Sports</option>
-          <option value="Television">Television</option>
-        </select>
+        />
         <button type="submit">SUBMIT</button>
       </form>
     </main>
   )
 }
 
-export default NewBlog
+export default TodoListForm
