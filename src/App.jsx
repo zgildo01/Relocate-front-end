@@ -29,8 +29,10 @@ import './App.css'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
-  const [wishlist, setWishlist] = useState([])
+
+  const [wishlists, setWishlists] = useState([])
   const [todolists, setTodoLists] = useState([])
+
 
   const handleLogout = () => {
     authService.logout()
@@ -42,7 +44,7 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const handleAddBlog = async (todoData) => {
+  const handleAddTodoList = async (todoData) => {
     const newList = await todolistService.create(todoData)
     setTodoLists([newList, ...todolists])
     navigate('/todolists')
@@ -51,7 +53,7 @@ const App = () => {
   useEffect(() => {
     const fetchAllWishLists = async () => {
       const data = await wishlistService.index()
-      setWishlist(data)
+      setWishlists(data)
     }
     const fetchAllTodoLists = async () => {
       const data = await todolistService.index()
@@ -60,9 +62,11 @@ const App = () => {
     if (user) {
       fetchAllWishLists()
       fetchAllTodoLists()
+    } else if (!user) {
+      
     }
   }, [user])
-
+  
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -85,7 +89,7 @@ const App = () => {
           }
         />
         <Route
-          path="/change-password"
+          path="/changePassword"
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
@@ -112,7 +116,7 @@ const App = () => {
           path='/wishlists'
           element={
             <ProtectedRoute user={user}>
-              <WishLists wishlist={wishlist}/>
+              <WishLists wishlists={wishlists}/>
             </ProtectedRoute>
           }
         />
