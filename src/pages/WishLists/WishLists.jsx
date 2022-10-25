@@ -1,7 +1,10 @@
 import styles from './WishLists.module.css'
 
 const WishLists = (props) => {
-  console.log('its a console log', props)
+
+  console.log(props)
+  console.log(props)
+
   return (
     <main className={styles.container}>
       {props.wishlist?.map((wishlist) => (
@@ -10,6 +13,7 @@ const WishLists = (props) => {
           Wishlists
         </p>
       ))}
+      <h1>hlep</h1>
     </main>
   )
 }

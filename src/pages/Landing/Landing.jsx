@@ -30,7 +30,7 @@ const Landing = ({ user }) => {
             <Link to='/create-wishlist'>
               <button>create a new wishlist</button>
             </Link>
-            <Link to='/wishlist'><button>view all wishlists</button></Link>
+            <Link to='/wishlists'><button>view all wishlists</button></Link>
         </div>
       </>
     :
