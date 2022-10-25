@@ -1,17 +1,25 @@
 import { Link } from 'react-router-dom'
-import styles from './Wishlist.module.css'
+import styles from './WishlistCard.module.css'
 
-const WishCard = ({ wishlist }) => {
+const WishCard = (props) => {
   return (
-    <Link to={`/wishlists/${wishlist._id}`}>
+    <Link to={`/wishlists/${props.wishlist._id}`}>
       <article className={styles.container}>
         <header>
           <span>
-            <h1>{wishlist.name}'s Wishlist</h1>
-            
+            <h1>{props.wishlist.name}</h1>
+            <h2>{props.wishlist.details}</h2>
+            <h3>{props.wishlist.wishlistItems}</h3>
+
           </span>
         </header>
-        <p>{wishlist}</p>
+        <p>{props.wishlist.details}</p>
+        {props.wishlist.wishlistItems.map(item => (
+          <p>
+            {item.name}
+            {item.purchased}
+          </p>
+        ))}
       </article>
     </Link>
   )
