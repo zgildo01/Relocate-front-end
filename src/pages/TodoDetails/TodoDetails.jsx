@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from './TodoDetails.module.css'
 
 import * as todolistService from '../../services/todoListService'
@@ -17,6 +17,7 @@ const TodoDetails = (props) => {
   }, [id])
 
   console.log('Todolist State:', todolist)
+  console.log(props)
 
   return (
     todolist ? 
@@ -26,6 +27,8 @@ const TodoDetails = (props) => {
           <h1>{todolist.name}</h1>
         </header>
         <p>{todolist.details}</p>
+        <Link to={`/todolists/${id}/edit`} state={todolist}>Edit</Link>
+        <button onClick={() => props.handleDeleteTodoList(id)}>Delete</button>
       </article>
       <section>
         <h1>Todolist Items</h1>
