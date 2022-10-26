@@ -9,7 +9,9 @@ const WishItems = (props) => {
         <WishItemCard 
           key={item._id} 
           item={item} 
-          user={props.user} 
+          user={props.user}
+          wishlistId={props.wishlistId}
+          handleDeleteItem={props.handleDeleteItem}
         />
       ))}
     </>
