@@ -16,6 +16,11 @@ const TodoDetails = (props) => {
     fetchTodoList()
   }, [id])
 
+  const handleAddTodo = async (todoData) => {
+    const newTodo = await todolistService.createTodo(id, todoData)
+    setTodolist({...todolist, todo: [...todolist.todo, newTodo]})
+  }
+
   return (
     todolist ? 
       <main className={styles.container}>
