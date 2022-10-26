@@ -19,6 +19,7 @@ import TodoDetails from './pages/TodoDetails/TodoDetails'
 import EditTodoList from './pages/EditTodoList/EditTodoList'
 import WishlistDetails from './pages/WishlistDetails/WishlistDetails'
 import NewWishlist from './pages/NewWishlist/NewWishlist'
+import EditWishlist from './pages/EditWishlist/EditWishlist'
 
 // services
 import * as authService from './services/authService'
@@ -185,7 +186,7 @@ const App = () => {
           path="/wishlists/:id/edit" 
           element={
             <ProtectedRoute user={user}>
-              <EditTodoList handleUpdateTodoList={handleUpdateTodoList} />
+              <EditWishlist handleUpdateWishlist={handleUpdateWishlist} />
             </ProtectedRoute>
         } />
       </Routes>
