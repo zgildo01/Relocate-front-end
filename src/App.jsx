@@ -61,7 +61,7 @@ const App = () => {
 
   const handleDeleteTodoList = async (id) => {
     const deletedList = await todolistService.deleteList(id)
-    setTodoLists(todolists.filter(l => l._id !== deletedList._id))
+    setTodoLists(todolists.filter((l) => l._id !== deletedList._id))
     navigate('/todolists')
   }
 
@@ -166,7 +166,7 @@ const App = () => {
           path="/todolists/:id/edit" 
           element={
             <ProtectedRoute user={user}>
-              <EditTodoList handleUpdateBlog={handleUpdateTodoList} />
+              <EditTodoList handleUpdateTodoList={handleUpdateTodoList} />
             </ProtectedRoute>
         } />
         
