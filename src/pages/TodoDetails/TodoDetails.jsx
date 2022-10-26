@@ -4,7 +4,7 @@ import styles from './TodoDetails.module.css'
 
 import * as todolistService from '../../services/todoListService'
 import NewTodo from "../../components/NewTodo/NewTodo";
-import TodoItems from "../../components/TodoItems/TodoItems"
+import TodoItems from "../../components/Todos/TodoItems"
 
 const TodoDetails = (props) => {
   const {id} = useParams()
