@@ -89,8 +89,8 @@ const NewWish = (props) => {
         <label htmlFor="link-input">Item Link</label>
         <input
           required
-          type="text"
-          name="link"
+          type="string"
+          name="linkToItem"
           id="link-input"
           value={form.linkToItem}
           placeholder="Item Link"
@@ -99,7 +99,7 @@ const NewWish = (props) => {
         <label htmlFor="photo-input">Item Photo</label>
         <input
           required
-          type="text"
+          type="url"
           name="photo"
           id="photo-input"
           value={form.photo}
