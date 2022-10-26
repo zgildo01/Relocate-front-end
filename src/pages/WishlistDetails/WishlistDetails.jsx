@@ -45,10 +45,10 @@ const WishlistDetails = (props) => {
         <h1>Wishlist Items</h1>
         <NewWish handleAddItem={handleAddItem} />
         <WishItems
-        wishlistId={id}
-        user={props.user} 
-        items={wishlist.wishlistItems} 
-        handleDeleteItem={handleDeleteItem} />
+          wishlistId={id}
+          user={props.user} 
+          items={wishlist.wishlistItems} 
+          handleDeleteItem={handleDeleteItem} />
       </section>
     </main>
     :
