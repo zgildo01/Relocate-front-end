@@ -86,22 +86,6 @@ const createItem = async (id, itemData) => {
   }
 }
 
-const updateItem = async (wishlistId, itemId, itemData) => {
-  try {
-    const res = await fetch(`${BASE_URL}/${wishlistId}/items/${itemId}`, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `Bearer ${tokenService.getToken()}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(itemData)
-    })
-    return res.json()
-  } catch (err) {
-    console.log(err)
-  }
-}
-
 const deleteItem = async (wishlistId, itemId) => {
   try {
     const res = await fetch(`${BASE_URL}/${wishlistId}/items/${itemId}`, {
@@ -123,6 +107,5 @@ export {
   update,
   deleteList,
   createItem,
-  updateItem,
   deleteItem,
 }
