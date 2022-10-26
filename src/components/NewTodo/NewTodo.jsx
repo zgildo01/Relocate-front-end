@@ -2,25 +2,26 @@ import { useState } from 'react'
 import styles from './NewTodo.module.css'
 
 const NewTodo = (props) => {
-  const [form, setForm] = useState({ text:''})
+  const [form, setForm] = useState({ name:'' })
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
 
-  const handleSumbit = ({ evt }) => {
+  const handleSubmit = ( evt ) => {
     evt.preventDefault()
-    setForm({ text: ''})
+    props.handleAddTodo(form)
+    setForm({ name: ''})
   }
 
 return (
-  <form className={styles.container} onSubmit={handleSumbit}>
+  <form className={styles.container} onSubmit={handleSubmit}>
     <textarea 
       required
       type= "text"
-      name="text"
+      name="name"
       id="text-input"
-      value={form.text}
+      value={form.name}
       placeholder="Add a To-do"
       onChange={handleChange} />
       <button type="submit">Create New To-do</button>

@@ -19,7 +19,7 @@ const TodoDetails = (props) => {
 
   const handleAddTodo = async (todoData) => {
     const newTodo = await todolistService.createTodo(id, todoData)
-    setTodolist({...todolist, todo: [...todolist.todo, newTodo]})
+    setTodolist({...todolist, todo: [...todolist.todoListItems, newTodo]})
   }
 
   return (

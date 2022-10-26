@@ -72,7 +72,7 @@ const deleteList = async (id) => {
 
 const createTodo = async (id, todoData) => {
   try {
-    const res = await fetch (`${BASE_URL}/${id}/todo`, {
+    const res = await fetch (`${BASE_URL}/${id}/items`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`, 
