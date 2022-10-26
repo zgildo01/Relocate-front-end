@@ -1,7 +1,8 @@
-const TodoItemCard = (props) => {
+const TodoItemCard = ({item, todolistId, user, handleDeleteItem }) => {
   return (
     <article> 
-      {props.todoItem.name}
+      <p>{item.name}</p>
+			<button onClick={()=> handleDeleteItem(todolistId, item._id)}>Delete</button>
     </article>
   )
   }
