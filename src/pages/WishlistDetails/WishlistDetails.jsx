@@ -26,8 +26,8 @@ const WishlistDetails = (props) => {
           <h2>{wishlist.name}</h2>
         </header>
         <p>{wishlist.details}</p>
-        {/* <button>View Full List</button>
-        <button onClick={() => props.handleDeleteWishlist(id)}>Delete</button> */}
+        <Link to={`/wishlists/${id}/edit`} state={wishlist}>Edit</Link>
+        <button onClick={() => props.handleDeleteWishlist(id)}>Delete</button>
       </article>
       <section>
         <h1>Wishlist Items</h1>
