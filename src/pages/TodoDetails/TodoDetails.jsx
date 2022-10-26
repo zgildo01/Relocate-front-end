@@ -4,6 +4,7 @@ import styles from './TodoDetails.module.css'
 
 import * as todolistService from '../../services/todoListService'
 import NewTodo from "../../components/NewTodo/NewTodo";
+import TodoItems from "../../components/TodoItems/TodoItems"
 
 const TodoDetails = (props) => {
   const {id} = useParams()
@@ -36,6 +37,7 @@ const TodoDetails = (props) => {
       <section>
         <h1>Todolist Items</h1>
         <NewTodo handleAddTodo={handleAddTodo} />
+        <TodoItems todoListItems={todolist.todoListItems}/>
       </section>
     </main>
     :
