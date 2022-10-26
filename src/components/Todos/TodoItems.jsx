@@ -28,6 +28,7 @@ const TodoItems = (props) => {
           user={props.user}
           todolistId={props.todolistId}
           handleCompleteItem={props.handleCompleteItem}
+          handleDeleteItem={props.handleDeleteItem}
         />
       )}
     </section>
