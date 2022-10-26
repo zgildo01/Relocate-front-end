@@ -69,6 +69,7 @@ const App = () => {
   const handleAddWishlist = async (wishlistData) => {
     const newWishlist = await wishlistService.create(wishlistData)
     setWishlists([newWishlist, ...wishlists])
+    navigate('/wishlists')
   }
   
   const handleUpdateWishlist = async (wishData) => {
