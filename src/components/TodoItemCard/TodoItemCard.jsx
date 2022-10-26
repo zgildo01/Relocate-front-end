@@ -1,7 +1,7 @@
 const TodoItemCard = (props) => {
   return (
     <article> 
-      <p>{props.todoItem.name}</p>
+      {props.todoItem.name}
     </article>
   )
   }

@@ -36,7 +36,8 @@ const TodoDetails = (props) => {
       </article>
       <section>
         <h1>Todolist Items</h1>
-        <NewTodo handleAddTodo={handleAddTodo} />
+        <NewTodo 
+        handleAddTodo={handleAddTodo}/>
         <TodoItems todoListItems={todolist.todoListItems}/>
       </section>
     </main>
