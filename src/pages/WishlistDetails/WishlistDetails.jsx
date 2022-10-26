@@ -19,7 +19,7 @@ const WishlistDetails = (props) => {
   console.log('wishlist state', wishlist)
 
   const handleAddItem = async (itemData) => {
-    const newItem = await wishlistService.createIem(id, itemData)
+    const newItem = await wishlistService.createItem(id, itemData)
     setWishlist({ ...wishlist, wishlistItems: [...wishlist.wishlistItems, newItem] })
   }
   

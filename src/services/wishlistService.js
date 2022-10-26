@@ -70,7 +70,7 @@ const deleteList = async (id) => {
   }
 }
 
-const createIem = async (id, itemData) => {
+const createItem = async (id, itemData) => {
   try {
     const res = await fetch(`${BASE_URL}/${id}/items`, {
       method: 'POST',
@@ -92,5 +92,5 @@ export {
   create,
   update,
   deleteList,
-  createIem,
+  createItem,
 }
