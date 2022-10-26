@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom"
 import styles from './WishlistDetails.module.css'
 
 import * as wishlistService from '../../services/wishlistService'
+import NewWish from "../../components/NewWish/NewWish"
 
 const WishlistDetails = (props) => {
   const { id } = useParams()
@@ -16,6 +17,11 @@ const WishlistDetails = (props) => {
     fetchWishlist()
   }, [id])
   console.log('wishlist state', wishlist)
+
+  const handleAddItem = async (itemData) => {
+    const newItem = await wishlistService.createIem(id, itemData)
+    setWishlist({ ...wishlist, wishlistItems: [...wishlist.wishlistItems, newItem] })
+  }
   
   return (
     wishlist ? 
@@ -31,6 +37,7 @@ const WishlistDetails = (props) => {
       </article>
       <section>
         <h1>Wishlist Items</h1>
+        <NewWish handleAddItem={handleAddItem} />
       </section>
     </main>
     :

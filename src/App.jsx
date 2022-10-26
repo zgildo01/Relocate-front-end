@@ -20,6 +20,7 @@ import EditTodoList from './pages/EditTodoList/EditTodoList'
 import WishlistDetails from './pages/WishlistDetails/WishlistDetails'
 import NewWishlist from './pages/NewWishlist/NewWishlist'
 import EditWishlist from './pages/EditWishlist/EditWishlist'
+import NewWish from './components/NewWish/NewWish'
 
 // services
 import * as authService from './services/authService'
