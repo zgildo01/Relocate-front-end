@@ -3,11 +3,16 @@ import styles from './TodoLists.module.css'
 
 const TodoLists = (props) => {
   return (
-    <main className={styles.container}>
+    props.todolists ?
+      <main className={styles.container}>
         {props.todolists?.map((todolist) => (
           <TodoCard key={todolist._id} todolist={todolist} />
         ))}
-    </main>
+      </main>
+    :
+      <>
+        <h1>Loading...</h1>
+      </>
   )
 }
 

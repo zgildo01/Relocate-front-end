@@ -1,12 +1,10 @@
-import styles from './TodoListForm.module.css'
+import styles from './EditTodoList.module.css'
+import { useLocation } from 'react-router-dom'
 import { useState } from "react"
 
-const TodoListForm = (props) => {
-  const [form, setForm] = useState({
-    name: '',
-    date: '',
-    details: '',
-  })
+const EditTodoList = (props) => {
+  const { state } = useLocation()
+  const [form, setForm] = useState(state)
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -14,13 +12,14 @@ const TodoListForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-		props.handleAddTodoList(form)
+		props.handleUpdateTodoList(form)
   }
 
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name-input">Name</label>
+        <h1>Edit To-Do List</h1>
+        <label htmlFor="name-input">Edit Name</label>
         <input
           required
           type="text"
@@ -30,7 +29,7 @@ const TodoListForm = (props) => {
           placeholder="To-do List Name"
           onChange={handleChange}
         />
-        <label htmlFor="details-input">Details</label>
+        <label htmlFor="details-input">Edit Details</label>
 				<textarea
           required
           type="text"
@@ -40,7 +39,7 @@ const TodoListForm = (props) => {
           placeholder="To-do Details"
           onChange={handleChange}
         />
-        <label htmlFor="date-input">Date</label>
+        <label htmlFor="date-input">Edit Date</label>
         <input
           required
           type="date"
@@ -56,4 +55,4 @@ const TodoListForm = (props) => {
   )
 }
 
-export default TodoListForm
+export default EditTodoList

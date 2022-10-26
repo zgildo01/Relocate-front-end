@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from './TodoDetails.module.css'
 
 import * as todolistService from '../../services/todoListService'
@@ -16,20 +16,25 @@ const TodoDetails = (props) => {
     fetchTodoList()
   }, [id])
 
-  console.log('Todolist State:', todolist)
-
   return (
-    <main className={styles.container}>
+    todolist ? 
+      <main className={styles.container}>
       <article>
         <header>
-          <h1>{props.todolist.name}</h1>
+          <h1>{todolist.name}</h1>
         </header>
-        <p>{props.todolist.details}</p>
+        <p>{todolist.details}</p>
+        <Link to={`/todolists/${id}/edit`} state={todolist}>Edit</Link>
+        <button onClick={() => props.handleDeleteTodoList(id)}>Delete</button>
       </article>
       <section>
         <h1>Todolist Items</h1>
       </section>
     </main>
+    :
+    <>
+      <p>Loading...</p>
+    </>
   );
 }
 
