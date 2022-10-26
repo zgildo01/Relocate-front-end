@@ -108,6 +108,6 @@ export {
   create,
   update,
   deleteList,
-  createIem,
+  createItem,
   updateItem,
 }

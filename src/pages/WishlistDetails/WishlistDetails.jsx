@@ -4,6 +4,7 @@ import styles from './WishlistDetails.module.css'
 
 import * as wishlistService from '../../services/wishlistService'
 import NewWish from "../../components/NewWish/NewWish"
+import WishItems from "../../components/WishItems/WishItems"
 
 const WishlistDetails = (props) => {
   const { id } = useParams()
@@ -38,6 +39,7 @@ const WishlistDetails = (props) => {
       <section>
         <h1>Wishlist Items</h1>
         <NewWish handleAddItem={handleAddItem} />
+        <WishItems items={wishlist.wishlistItems} user={props.user} />
       </section>
     </main>
     :
