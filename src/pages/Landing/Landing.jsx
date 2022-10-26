@@ -1,26 +1,27 @@
 import { Link } from 'react-router-dom'
 import styles from './Landing.module.css'
+import Button from '@mui/material/Button'
 
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
     {user ?
       <>
-        <p>Welcome, {user.name}</p>
+        <h4>Welcome, {user.name}</h4>
         <p>Countdown placeholder</p>
 
         <div>
-          <p>to-do List</p>
-          <p>to-do list view placeholder</p>
+          <p id='header'>to-do List</p>
+          <p id='view-to-do'>to-do list view placeholder</p>
           <Link
             to="/create-todolist"
           >
-            <button>create new to-do list</button>
+            <Button variant='contained' size="small">create to-do list</Button>
           </Link>
           <Link
             to="/todolists"
           >
-            <button>view all to-do list</button>
+            <Button variant='contained' size="small">view all to-do lists</Button>
           </Link>
         </div>
 
@@ -28,9 +29,9 @@ const Landing = ({ user }) => {
           <p>Wishlist List</p>
           <p>wishlistlist view placeholder</p>
             <Link to='/create-wishlist'>
-              <button>create a new wishlist</button>
+              <Button variant='contained' size="small">create wishlist</Button>
             </Link>
-            <Link to='/wishlists'><button>view all wishlists</button></Link>
+            <Link to='/wishlists'><Button variant='contained' size="small">view all wishlists</Button></Link>
         </div>
       </>
     :
@@ -43,12 +44,12 @@ const Landing = ({ user }) => {
 
         <div className='login-div'>
           <p>Already have an account?</p>
-          <button><Link to="/login">Log In</Link></button>
+          <Button variant='contained' size="small"><Link to="/login">Log In</Link></Button>
         </div>
 
         <div className='sign-up-div'>
           <p>New to Relocate?</p>
-          <button><Link to="/signup">Sign Up</Link></button>
+          <Button variant='contained' size="small"><Link to="/signup">Sign Up</Link></Button>
         </div>
 
         <div className='about-relocate'>
