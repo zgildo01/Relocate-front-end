@@ -18,6 +18,7 @@ import TodoListForm from './pages/TodoListForm/TodoListForm'
 import TodoDetails from './pages/TodoDetails/TodoDetails'
 import EditTodoList from './pages/EditTodoList/EditTodoList'
 import WishlistDetails from './pages/WishlistDetails/WishlistDetails'
+import NewWishlist from './pages/NewWishlist/NewWishlist'
 
 // services
 import * as authService from './services/authService'
@@ -141,7 +142,7 @@ const App = () => {
           path='/create-wishlist'
           element={
             <ProtectedRoute user={user}>
-              <WishLists handleAddWishlist={handleAddWishlist}/>
+              <NewWishlist handleAddWishlist={handleAddWishlist}/>
             </ProtectedRoute>
           }
         />
@@ -168,6 +169,7 @@ const App = () => {
               <EditTodoList handleUpdateBlog={handleUpdateTodoList} />
             </ProtectedRoute>
         } />
+        
       </Routes>
     </>
   )
