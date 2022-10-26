@@ -16,9 +16,6 @@ const TodoDetails = (props) => {
     fetchTodoList()
   }, [id])
 
-  console.log('Todolist State:', todolist)
-  console.log(props)
-
   return (
     todolist ? 
       <main className={styles.container}>

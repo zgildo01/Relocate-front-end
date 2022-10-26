@@ -12,7 +12,7 @@ const EditTodoList = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-		
+		props.handleUpdateTodoList(form)
   }
 
   return (
