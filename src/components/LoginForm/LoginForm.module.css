@@ -1,3 +1,7 @@
+body {
+  background-color: antiquewhite;
+}
+
 .container {
   display: flex;
   flex-flow: column nowrap;

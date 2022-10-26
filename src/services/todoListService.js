@@ -70,10 +70,27 @@ const deleteList = async (id) => {
   }
 }
 
+const createTodo = async (id, todoData) => {
+  try {
+    const res = await fetch (`${BASE_URL}/${id}/items`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`, 
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(todoData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export { 
   index,
   show,
   create,
   update,
   deleteList,
+  createTodo,
 }
