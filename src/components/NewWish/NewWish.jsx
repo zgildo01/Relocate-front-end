@@ -18,7 +18,7 @@ const NewWish = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Update this line shortly....
+    props.handleAddItem(form)
     setForm({ 
       price: '',
       name: '',

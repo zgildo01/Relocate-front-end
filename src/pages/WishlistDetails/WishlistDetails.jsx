@@ -4,6 +4,7 @@ import styles from './WishlistDetails.module.css'
 
 import * as wishlistService from '../../services/wishlistService'
 import NewWish from "../../components/NewWish/NewWish"
+import WishItems from "../../components/WishItems/WishItems"
 
 const WishlistDetails = (props) => {
   const { id } = useParams()
@@ -22,6 +23,11 @@ const WishlistDetails = (props) => {
     const newItem = await wishlistService.createItem(id, itemData)
     setWishlist({ ...wishlist, wishlistItems: [...wishlist.wishlistItems, newItem] })
   }
+
+  const handleDeleteItem = async (wishlistId, itemId) => {
+    await wishlistService.deleteItem(wishlistId, itemId)
+    setWishlist({ ...wishlist, wishlistItems: wishlist.wishlistItems.filter((i) => i._id !== itemId) })
+  }
   
   return (
     wishlist ? 
@@ -38,6 +44,11 @@ const WishlistDetails = (props) => {
       <section>
         <h1>Wishlist Items</h1>
         <NewWish handleAddItem={handleAddItem} />
+        <WishItems
+        wishlistId={id}
+        user={props.user} 
+        items={wishlist.wishlistItems} 
+        handleDeleteItem={handleDeleteItem} />
       </section>
     </main>
     :

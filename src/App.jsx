@@ -1,6 +1,6 @@
 // npm modules
 import { useState, useEffect } from 'react'
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
 import Signup from './pages/Signup/Signup'
@@ -20,7 +20,6 @@ import EditTodoList from './pages/EditTodoList/EditTodoList'
 import WishlistDetails from './pages/WishlistDetails/WishlistDetails'
 import NewWishlist from './pages/NewWishlist/NewWishlist'
 import EditWishlist from './pages/EditWishlist/EditWishlist'
-import NewWish from './components/NewWish/NewWish'
 
 // services
 import * as authService from './services/authService'
