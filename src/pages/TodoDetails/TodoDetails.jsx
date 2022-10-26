@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import styles from './TodoDetails.module.css'
 
 import * as todolistService from '../../services/todoListService'
+import NewTodo from "../../components/NewTodo/NewTodo";
 
 const TodoDetails = (props) => {
   const {id} = useParams()
@@ -34,6 +35,7 @@ const TodoDetails = (props) => {
       </article>
       <section>
         <h1>Todolist Items</h1>
+        <NewTodo handleAddTodo={handleAddTodo} />
       </section>
     </main>
     :
