@@ -26,7 +26,7 @@ const WishlistDetails = (props) => {
 
   const handleDeleteItem = async (wishlistId, itemId) => {
     await wishlistService.deleteItem(wishlistId, itemId)
-    setWishlist({ ...wishlist, wishlistItems: wishlist.wishlistItems.filter((i) => i._id !== wishlistId) })
+    setWishlist({ ...wishlist, wishlistItems: wishlist.wishlistItems.filter((i) => i._id !== itemId) })
   }
   
   return (
@@ -44,7 +44,11 @@ const WishlistDetails = (props) => {
       <section>
         <h1>Wishlist Items</h1>
         <NewWish handleAddItem={handleAddItem} />
-        <WishItems items={wishlist.wishlistItems} user={props.user} handleDeleteItem={handleDeleteItem} />
+        <WishItems
+        wishlistId={id}
+        user={props.user} 
+        items={wishlist.wishlistItems} 
+        handleDeleteItem={handleDeleteItem} />
       </section>
     </main>
     :
