@@ -23,6 +23,11 @@ const TodoDetails = (props) => {
     setTodolist({...todolist, todo: [...todolist.todoListItems, newTodo]})
   }
 
+  const handleDeleteItem = async (todolistId, itemId) => {
+    await todolistService.deleteItem(todolistId, itemId)
+    setTodolist({ ...todolist, todoListItems: todolist.todoListItems.filter((i) => i._id !== itemId) })
+  }
+
   return (
     todolist ? 
       <main className={styles.container}>
@@ -37,7 +42,12 @@ const TodoDetails = (props) => {
       <section>
         <h1>Todolist Items</h1>
         <NewTodo handleAddTodo={handleAddTodo} />
-        <TodoItems todoListItems={todolist.todoListItems}/>
+        <TodoItems 
+          todolistId={id}
+          user={props.user}
+          items={todolist.todoListItems}
+          handleDeleteItem={handleDeleteItem}
+        />
       </section>
     </main>
     :

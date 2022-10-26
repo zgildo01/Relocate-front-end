@@ -1,4 +1,3 @@
-
 const CommentCard = ({ item, wishlistId, user, handleDeleteItem }) => {
   return (
     <article>

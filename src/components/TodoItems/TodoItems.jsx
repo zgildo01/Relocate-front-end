@@ -1,14 +1,18 @@
 import TodoItemCard from "../TodoItemCard/TodoItemCard";
 
 const TodoItems = (props) => {
-  if(!props.todoListItems) return <h4>No to-dos yet</h4> 
+  console.log(props)
 
   return (
     <>
-      {props.todoListItems.map((todoItem) => 
+      {props.items.map((item) =>
         <TodoItemCard
-          key={todoItem._id}
-          todoItem={todoItem} />
+          key={item._id}
+          item={item}
+          user={props.user}
+          todolistId={props.todolistId}
+          handleDeleteItem={props.handleDeleteItem}
+        />
       )}
     </>
   )

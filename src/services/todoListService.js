@@ -86,6 +86,22 @@ const createTodo = async (id, todoData) => {
   }
 }
 
+
+
+const deleteItem = async(todolistId, itemId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${todolistId}/items/${itemId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export { 
   index,
   show,
@@ -93,4 +109,5 @@ export {
   update,
   deleteList,
   createTodo,
+  deleteItem
 }
