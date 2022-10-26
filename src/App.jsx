@@ -69,6 +69,18 @@ const App = () => {
     const newWishlist = await wishlistService.create(wishlistData)
     setWishlists([newWishlist, ...wishlists])
   }
+  
+  const handleUpdateWishlist = async (wishData) => {
+    const updatedList = await wishlistService.update(wishData)
+    setWishlists(wishlists.map((w) => wishData._id === w._id ? updatedList : w))
+    navigate('/wishlists')
+  }
+
+  const handleDeleteWishlist = async (id) => {
+    const deletedList = await wishlistService.deleteList(id)
+    setWishlists(wishlists.filter((w) => w._id !== deletedList._id))
+    navigate('/wishlists')
+  }
 
   useEffect(() => {
     const fetchAllWishLists = async () => {
@@ -169,7 +181,13 @@ const App = () => {
               <EditTodoList handleUpdateTodoList={handleUpdateTodoList} />
             </ProtectedRoute>
         } />
-        
+        <Route
+          path="/wishlists/:id/edit" 
+          element={
+            <ProtectedRoute user={user}>
+              <EditTodoList handleUpdateTodoList={handleUpdateTodoList} />
+            </ProtectedRoute>
+        } />
       </Routes>
     </>
   )
