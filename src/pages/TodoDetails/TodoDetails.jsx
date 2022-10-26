@@ -28,6 +28,16 @@ const TodoDetails = (props) => {
     setTodolist({ ...todolist, todoListItems: todolist.todoListItems.filter((i) => i._id !== itemId) })
   }
 
+  const handleCompleteItem = async (todolistId, itemId) => {
+    const updatedList = await todolistService.updateItem(todolistId, itemId)
+    setTodolist(updatedList)
+  }
+
+  const handleRemoveItem = async (todolistId, itemId) => {
+    const updatedList = await todolistService.updateItem(todolistId, itemId)
+    setTodolist(updatedList)
+  }
+
   return (
     todolist ? 
       <main className={styles.container}>
@@ -47,7 +57,10 @@ const TodoDetails = (props) => {
           user={props.user}
           items={todolist.todoListItems}
           handleDeleteItem={handleDeleteItem}
+          handleCompleteItem={handleCompleteItem}
+          handleRemoveItem={handleRemoveItem}
         />
+        
       </section>
     </main>
     :
