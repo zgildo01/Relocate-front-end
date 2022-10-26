@@ -8,7 +8,6 @@ const WishCard = (props) => {
         <header>
           <span>
             <h1>{props.wishlist.name}</h1>
-            <h2>{props.wishlist.details}</h2>
             <h3>{props.wishlist.wishlistItems}</h3>
 
           </span>
