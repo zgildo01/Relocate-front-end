@@ -163,7 +163,10 @@ const App = () => {
           path='/wishlists/:id'
           element={
             <ProtectedRoute user={user}>
-              <WishlistDetails user={user}/>
+              <WishlistDetails 
+                user={user} 
+                handleDeleteWishlist={handleDeleteWishlist}
+              />
             </ProtectedRoute>
           }
         />
