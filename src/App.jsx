@@ -64,6 +64,11 @@ const App = () => {
     navigate('/todolists')
   }
 
+  const handleAddWishlist = async (wishlistData) => {
+    const newWishlist = await wishlistService.create(wishlistData)
+    setWishlists([newWishlist, ...wishlists])
+  }
+
   useEffect(() => {
     const fetchAllWishLists = async () => {
       const data = await wishlistService.index()
@@ -136,7 +141,7 @@ const App = () => {
           path='/create-wishlist'
           element={
             <ProtectedRoute user={user}>
-              <WishLists />
+              <WishLists handleAddWishlist={handleAddWishlist}/>
             </ProtectedRoute>
           }
         />
