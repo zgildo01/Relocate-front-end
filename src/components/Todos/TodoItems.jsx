@@ -8,6 +8,7 @@ const TodoItems = (props) => {
   console.log(notDone)
   return (
     <>
+    <section>
       {done.map((item) =>
         <TodoItemCard
           key={item._id}
@@ -18,6 +19,8 @@ const TodoItems = (props) => {
           handleRemoveItem={props.handleRemoveItem}
         />
       )}
+      </section>
+      <section>
       {notDone.map((item) =>
         <TodoItemCard
           key={item._id}
@@ -28,7 +31,7 @@ const TodoItems = (props) => {
           handleDeleteItem={props.handleDeleteItem}
         />
       )}
-
+    </section>
     </>
   )
 }
