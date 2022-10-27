@@ -48,7 +48,8 @@ const WishlistDetails = (props) => {
           wishlistId={id}
           user={props.user} 
           items={wishlist.wishlistItems} 
-          handleDeleteItem={handleDeleteItem} />
+          handleDeleteItem={handleDeleteItem} 
+        />
       </section>
     </main>
     :
