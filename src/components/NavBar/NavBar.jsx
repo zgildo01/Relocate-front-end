@@ -29,7 +29,7 @@ const NavBar = ({ user, handleLogout }) => {
       <nav className={styles.navContainer}>
         {user ?
           <>
-            <img className={styles.logo} src={navLogo} alt="logo"/>
+            <Link to="/"><img className={styles.logo} src={navLogo} alt="logo"/></Link>
             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
               <Tooltip title="Account settings">
                 <IconButton
