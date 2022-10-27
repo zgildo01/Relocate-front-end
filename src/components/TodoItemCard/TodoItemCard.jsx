@@ -2,11 +2,11 @@ const TodoItemCard = ({item, todolistId, user, handleDeleteItem, handleCompleteI
   return (
     <article> 
       <p>{item.name}</p>
-			<button onClick={()=> handleDeleteItem(todolistId, item._id)}>Delete</button>
+			<button onClick={()=> handleDeleteItem(todolistId, item._id)} className="button-3">Delete</button>
       {handleCompleteItem ? 
-      <button onClick={()=> handleCompleteItem(todolistId, item._id)}>Add Item</button> 
+      <button onClick={()=> handleCompleteItem(todolistId, item._id)} className="button-3">Add Item</button> 
       : 
-      <button onClick={()=> handleRemoveItem(todolistId, item._id)}>Remove Item</button>}
+      <button onClick={()=> handleRemoveItem(todolistId, item._id)} className="button-3">Remove Item</button>}
     </article>
   )
   }

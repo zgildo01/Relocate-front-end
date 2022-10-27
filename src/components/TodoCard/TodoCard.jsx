@@ -9,10 +9,9 @@ const TodoCard = ({ todolist }) => {
           <span>
             <h1>{todolist.name}</h1>
             <h3>{todolist.date}</h3>
-            <h2>{todolist.details}</h2>
           </span>
         </header>
-        <p>{todolist.details}</p>
+        <h4>{todolist.details}</h4>
         {todolist.todoListItems.map(item => (
           <p key={item._id}>
             {item.name}
