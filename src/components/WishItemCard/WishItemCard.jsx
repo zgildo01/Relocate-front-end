@@ -7,8 +7,8 @@ const CommentCard = ({ item, wishlistId, user, handleDeleteItem }) => {
       <p>{item.height}</p>
       <p>{item.width}</p>
       <p>{item.length}</p>
-      <p>{item.linkToItem}</p>
-      <p>{item.photo}</p>
+      <a href={item.linkToItem}>Link</a>
+      <img src={item.photo} alt={item.name} />
 			<button onClick={()=> handleDeleteItem(wishlistId, item._id)}>
         DELETE
       </button>
