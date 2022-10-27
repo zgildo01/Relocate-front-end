@@ -1,0 +1,17 @@
+.navMenu {
+  color: #3F5124;
+}
+
+.navMenu a {
+  color: #3F5124
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between; 
+  margin-left: .5rem;
+}
+
+.logo {
+  width: 50px;
+}
