@@ -24,7 +24,7 @@ return (
       value={form.name}
       placeholder="Add a To-do"
       onChange={handleChange} />
-      <button type="submit">Create New To-do</button>
+      <button type="submit" className="button-3">Create New To-do</button>
   </form> 
   )
 }

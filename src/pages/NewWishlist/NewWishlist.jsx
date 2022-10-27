@@ -38,7 +38,7 @@ const NewWishlist = (props) => {
           placeholder="Details"
           onChange={handleChange}
         />
-        <button type="submit">Create Wishlist</button>
+        <button type="submit" className="button-3">Create Wishlist</button>
       </form>
     </main>
   )
