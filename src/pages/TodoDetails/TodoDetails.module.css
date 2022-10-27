@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .button-3 {
   appearance: none;
   background-color: #2ea44f;

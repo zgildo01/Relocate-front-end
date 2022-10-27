@@ -4,7 +4,7 @@ import styles from './WishlistCard.module.css'
 const WishlistCard = ({wishlist}) => {
 
   return (
-    <Link to={`/wishlists/${wishlist._id}`}>
+    <Link to={`/wishlists/${wishlist._id}`} >
       <article className={styles.container}>
         <header>
           <span>
