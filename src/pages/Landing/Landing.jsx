@@ -41,17 +41,21 @@ const Landing = ({ user }) => {
       <>
         <div id='welcome-statement'> 
           <img 
+            className={styles.shelf}
             src={Shelflogo} alt="relocate-shelf-logo" />
           <h2 id="brand-statement"> Giving you peace of mind every step of the way. Worry Less. Enjoy More.</h2>
           <h2 className={styles.tag}>We make moving easier.</h2>
         </div>
 
-        <div>
-          <img src={mockupRelocate} alt="mockup-of-app" />
+        <div className={styles.choices}>
           <div className={styles.loginDiv}>
             <p>Already have an account?</p>
             <Button variant='contained' size="small"><Link to="/login">Log In</Link></Button>
           </div>
+
+          <img 
+            src={mockupRelocate} alt="mockup-of-app" 
+            className={styles.phone}/>
 
           <div className={styles.signupDiv}>
             <p>New to Relocate?</p>
@@ -61,7 +65,7 @@ const Landing = ({ user }) => {
 
         <div className={styles.about}>
           <h3>About Relocate.</h3>
-          <p>Relocate. is a hub for all things you need when you're moving. This app makes an overwhelming experience more seamle ss and less stressful.</p>
+          <p>Relocate. is a hub for all things you need when you're moving. This app makes an overwhelming experience more seamless and less stressful.</p>
           <p>Instead of using multiple documents and spreadsheets, Relocate. gives you the power to have everything in one place - all you have to do is sign-up. We wanted to create an app to help ease the stress of moving which is a notoriously bad time.</p>
         </div>
 
@@ -80,7 +84,8 @@ const Landing = ({ user }) => {
               <li>Upload a floor plan and add dimensions for each room</li>
             </ul>
           </div>
-          <p>... and others. <b>Explore Relocate.</b> </p>
+          <p>... and others.  </p>
+          <h2 className={styles.explore}>Explore Relocate.</h2>
         </div>
       </>
     }
