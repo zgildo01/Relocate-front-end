@@ -5,8 +5,11 @@
 }
 
 .shelf {
-  width: 100%;
+  display: flex;
+  width: 90%;
   padding: 1rem; 
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
