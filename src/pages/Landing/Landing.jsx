@@ -11,10 +11,8 @@ const Landing = ({ user }) => {
     {user ?
       <>
         <h4>Welcome, {user.name}</h4>
-        <p>Countdown placeholder</p>
-
         <div>
-          <p id='header'>to-do List</p>
+          <h4 id='header'>To-do Lists</h4>
           <p id='view-to-do'>to-do list view placeholder</p>
           <Link
             to="/create-todolist"
@@ -29,7 +27,7 @@ const Landing = ({ user }) => {
         </div>
 
         <div>
-          <p>Wishlist List</p>
+          <h4>Wishlists</h4>
           <p>wishlistlist view placeholder</p>
             <Link to='/create-wishlist'>
               <Button variant='contained' size="small">create wishlist</Button>
