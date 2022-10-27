@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import styles from './Landing.module.css'
 import Button from '@mui/material/Button'
+import Shelflogo from '../../assets/ShelfLogo.png'
+import mockupRelocate from '../../assets/mockupRelocate.png'
+
 
 const Landing = ({ user }) => {
   return (
@@ -36,34 +39,38 @@ const Landing = ({ user }) => {
       </>
     :
       <>
-        <div className='welcome-statement'> 
-            
-          <h2> Giving you peace of mind every step of the way. Worry Less. Enjoy More.</h2>
-          <h2>We make moving easier.</h2>
+        <div id='welcome-statement'> 
+          <img 
+            src={Shelflogo} alt="relocate-shelf-logo" />
+          <h2 id="brand-statement"> Giving you peace of mind every step of the way. Worry Less. Enjoy More.</h2>
+          <h2 className={styles.tag}>We make moving easier.</h2>
         </div>
 
-        <div className='login-div'>
-          <p>Already have an account?</p>
-          <Button variant='contained' size="small"><Link to="/login">Log In</Link></Button>
+        <div>
+          <img src={mockupRelocate} alt="mockup-of-app" />
+          <div className={styles.loginDiv}>
+            <p>Already have an account?</p>
+            <Button variant='contained' size="small"><Link to="/login">Log In</Link></Button>
+          </div>
+
+          <div className={styles.signupDiv}>
+            <p>New to Relocate?</p>
+            <Button variant='contained' size="small"><Link to="/signup">Sign Up</Link></Button>
+          </div>
         </div>
 
-        <div className='sign-up-div'>
-          <p>New to Relocate?</p>
-          <Button variant='contained' size="small"><Link to="/signup">Sign Up</Link></Button>
-        </div>
-
-        <div className='about-relocate'>
+        <div className={styles.about}>
           <h3>About Relocate.</h3>
           <p>Relocate. is a hub for all things you need when you're moving. This app makes an overwhelming experience more seamle ss and less stressful.</p>
           <p>Instead of using multiple documents and spreadsheets, Relocate. gives you the power to have everything in one place - all you have to do is sign-up. We wanted to create an app to help ease the stress of moving which is a notoriously bad time.</p>
         </div>
 
-        <div className='meet-the-team'>
+        <div className={styles.meetTheTeam}>
           <h3>Meet the Team</h3>
           <p>Chaotic Good Co. is made up of a group of software developers including Steph Michael, Zeus Zaragoza-Gildo and Ryan Combest. We strive to make clean, functional products. </p>
         </div>
 
-        <div className='features-div'> 
+        <div className={styles.features}> 
           <h3>Features</h3>
           <p>Relocate. allows you to:</p>
           <div className='features-list'>
