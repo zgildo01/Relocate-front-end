@@ -16,3 +16,16 @@ Relocate is an app that seeks to organize the moving experience so users are abl
 - Users are able to edit their wishlist details, as well as delete their wishlists
 - If users click on the logo in the top left corner, the will be taken back to the home page.
 - Clicking on the menu button in the top right corner opens up the user settings menu in order to change their password, view their lists, create new lists, or log out.
+
+## Technologies
+
+- Azure
+- CSS
+- Express
+- HTML
+- JavaScript
+- MongoDB
+- Mongoose
+- MUI
+- Node
+- React
