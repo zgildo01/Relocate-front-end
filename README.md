@@ -29,3 +29,12 @@ Relocate is an app that seeks to organize the moving experience so users are abl
 - MUI
 - Node
 - React
+
+## Icebox Items
+
+- [ ] Users will be able to create, view, update, and delete a budget spreadsheet.
+- [ ] Users will be able to add different items to the budget sheet and any reference links.
+- [ ] Users will be able to create and upload floorplans of their new home in order to pre-plan plaecment of household items.
+- [ ] Drag and drop interactivity for the floorplan.
+- [ ] Users will be able to create a packing list for each room of the floorplan.
+- [ ] Users will be able to create, view, and update a calendar to keep track of deadlines related to the move.
