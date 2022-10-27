@@ -60,7 +60,6 @@ const TodoDetails = (props) => {
           handleCompleteItem={handleCompleteItem}
           handleRemoveItem={handleRemoveItem}
         />
-        
       </section>
     </main>
     :
