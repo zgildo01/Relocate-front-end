@@ -8,7 +8,7 @@ const TodoCard = ({ todolist }) => {
         <header>
           <span>
             <h1>{todolist.name}</h1>
-            <h3>{todolist.date}</h3>
+            <h3>{new Date(todolist.date).toLocaleDateString()}</h3>
           </span>
         </header>
         <h4>{todolist.details}</h4>
