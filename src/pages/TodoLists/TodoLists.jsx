@@ -6,7 +6,10 @@ const TodoLists = (props) => {
     props.todolists ?
       <main className={styles.container}>
         {props.todolists?.map((todolist) => (
-          <TodoCard key={todolist._id} todolist={todolist} />
+          <TodoCard 
+            key={todolist._id} 
+            todolist={todolist} 
+          />
         ))}
       </main>
     :

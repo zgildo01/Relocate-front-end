@@ -53,7 +53,7 @@ const NewWish = (props) => {
           placeholder="Item Name"
           onChange={handleChange}
         />
-        <label htmlFor="height-input">Item Height</label>
+        <label htmlFor="height-input">Item Height (inches)</label>
         <input
           required
           type="number"
@@ -64,7 +64,7 @@ const NewWish = (props) => {
           placeholder={0}
           onChange={handleChange}
         />
-        <label htmlFor="width-input">Item Width</label>
+        <label htmlFor="width-input">Item Width (inches)</label>
         <input
           required
           type="number"
@@ -75,7 +75,7 @@ const NewWish = (props) => {
           placeholder={0}
           onChange={handleChange}
         />
-        <label htmlFor="length-input">Item Length</label>
+        <label htmlFor="length-input">Item Length (inches)</label>
         <input
           required
           type="number"
@@ -106,7 +106,7 @@ const NewWish = (props) => {
           placeholder="Item Image Link"
           onChange={handleChange}
         />
-      <button type="submit">Submit</button>
+      <button type="submit" className="button-3">Submit</button>
     </form>
   )
 }

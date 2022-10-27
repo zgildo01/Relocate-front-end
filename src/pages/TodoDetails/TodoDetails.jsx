@@ -46,8 +46,8 @@ const TodoDetails = (props) => {
           <h1>{todolist.name}</h1>
         </header>
         <p>{todolist.details}</p>
-        <Link to={`/todolists/${id}/edit`} state={todolist}>Edit</Link>
-        <button onClick={() => props.handleDeleteTodoList(id)}>Delete</button>
+        <Link to={`/todolists/${id}/edit`} state={todolist}><button className="button-3">Edit</button></Link>
+        <button onClick={() => props.handleDeleteTodoList(id)} className="button-3">Delete</button>
       </article>
       <section>
         <h1>Todolist Items</h1>

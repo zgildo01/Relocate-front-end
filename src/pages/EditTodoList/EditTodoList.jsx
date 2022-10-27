@@ -49,7 +49,7 @@ const EditTodoList = (props) => {
           placeholder="To-do List Name"
           onChange={handleChange}
         />
-        <button type="submit">SUBMIT</button>
+        <button type="submit" className="button-3">SUBMIT</button>
       </form>
     </main>
   )

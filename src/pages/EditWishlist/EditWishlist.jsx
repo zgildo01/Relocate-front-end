@@ -39,7 +39,7 @@ const EditWishlist = (props) => {
           placeholder="Details"
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="button-3">Submit</button>
       </form>
     </main>
   )
