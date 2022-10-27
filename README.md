@@ -38,3 +38,11 @@ Relocate is an app that seeks to organize the moving experience so users are abl
 - [ ] Drag and drop interactivity for the floorplan.
 - [ ] Users will be able to create a packing list for each room of the floorplan.
 - [ ] Users will be able to create, view, and update a calendar to keep track of deadlines related to the move.
+
+## Links
+
+[Launch](https://cgcorelocate.netlify.app/)
+
+[Planning Materials](https://trello.com/b/SostVHjx/unit-3-project)
+
+[Back-end Github Repo](https://github.com/zgildo01/Relocate-back-end)
