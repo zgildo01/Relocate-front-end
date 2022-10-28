@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import styles from './Landing.module.css'
 import Shelflogo from '../../assets/ShelfLogo.png'
 import mockupRelocate from '../../assets/mockupRelocate.png'
+import packing from '../../assets/packing.png'
 
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
@@ -14,26 +15,27 @@ const Landing = ({ user }) => {
     {user ?
       <>
         <h4>Welcome, {user.name}</h4>
-        <div>
-          <h4 id='header'>To-do Lists</h4>
+        <img src={packing} alt="packing" className={styles.packing}/>
+        <div className={styles.buttonContainer}>
+          <h4 id='header'>TO-DO LISTS</h4>
           <Link
             to="/create-todolist"
           >
-            <Button variant='contained' size="small">create to-do list</Button>
+            <button variant='contained' size="small">Create to-do list</button>
           </Link>
           <Link
             to="/todolists"
           >
-            <Button variant='contained' size="small">view all to-do lists</Button>
+            <button variant='contained' size="small">View all lists</button>
           </Link>
         </div>
 
-        <div>
-          <h4>Wishlists</h4>
+        <div className={styles.buttonContainer}>
+          <h4>WISHLISTS</h4>
             <Link to='/create-wishlist'>
-              <Button variant='contained' size="small">create wishlist</Button>
+              <button variant='contained' size="small">Create wishlist</button>
             </Link>
-            <Link to='/wishlists'><Button variant='contained' size="small">view all wishlists</Button></Link>
+            <Link to='/wishlists'><button variant='contained' size="small">View all wishlists</button></Link>
         </div>
       </>
     :

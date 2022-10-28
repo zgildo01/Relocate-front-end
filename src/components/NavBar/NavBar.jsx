@@ -13,6 +13,10 @@ import Tooltip from '@mui/material/Tooltip';
 import Logout from '@mui/icons-material/Logout';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import navLogo from '../../assets/Favicon.png'
+import ListIcon from '@mui/icons-material/List';
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
+import PasswordIcon from '@mui/icons-material/Password';
 
 const NavBar = ({ user, handleLogout }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -68,7 +72,7 @@ const NavBar = ({ user, handleLogout }) => {
                     display: 'block',
                     position: 'absolute',
                     top: 0,
-                    right: 16,
+                    right: 8,
                     width: 10,
                     height: 10,
                     bgcolor: 'background.paper',
@@ -80,10 +84,10 @@ const NavBar = ({ user, handleLogout }) => {
               transformOrigin={{ horizontal: 'right', vertical: 'top' }}
               anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-              <MenuItem>
-                <Link to="/changePassword">Change Password</Link>
-              </MenuItem>
               <MenuItem >
+                <ListItemIcon>
+                  <ListIcon ></ListIcon>
+                </ListItemIcon>
                 <Link to="/todolists">Your To-do Lists</Link>
               </MenuItem>
               <MenuItem>
@@ -93,14 +97,26 @@ const NavBar = ({ user, handleLogout }) => {
                 <Link to="/wishlists">Your Wish Lists</Link>
               </MenuItem>
               <MenuItem>
+                <ListItemIcon>
+                  <NoteAddIcon />
+                </ListItemIcon>
                 <Link to="/create-todolist">Create New To-do List</Link>
               </MenuItem>
               <MenuItem>
+                <ListItemIcon>
+                  <LoyaltyIcon />
+                </ListItemIcon>
                 <Link to="/create-wishlist">Create New Wish List</Link>
               </MenuItem>
-              <MenuItem >
+              <MenuItem>
                 <ListItemIcon>
-                  <Logout fontSize="small" />
+                  <PasswordIcon />
+                </ListItemIcon>
+                <Link to="/changePassword">Change Password</Link>
+              </MenuItem>
+              <MenuItem className={styles.logout}>
+                <ListItemIcon>
+                  <Logout />
                 </ListItemIcon>
                 <Link to="" onClick={handleLogout}>LOG OUT</Link>
               </MenuItem>
