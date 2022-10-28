@@ -67,3 +67,12 @@ label {
 h1 {
   font-size: 150%;
 }
+
+.todoBanner {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 75%;
+}

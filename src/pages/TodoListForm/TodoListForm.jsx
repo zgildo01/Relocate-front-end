@@ -3,7 +3,7 @@ import { useState } from "react"
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import TextField from '@mui/material/TextField'
-import { style } from '@mui/system'
+import NewTodoBanner from '../../assets/new-todo-banner.png'
 
 const TodoListForm = (props) => {
   const [form, setForm] = useState({
@@ -23,7 +23,9 @@ const TodoListForm = (props) => {
 
   return (
     <>
-      <h1>Create a new To-do List</h1>
+      <div className={styles.todoBanner}>
+        <img src={NewTodoBanner} alt="todo list banner" />
+      </div>
       <div className={styles.container}>
         <Box className={styles.formContainer}>
           <Paper elevation={3}> 
