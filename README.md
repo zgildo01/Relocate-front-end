@@ -1,6 +1,6 @@
 ![Tagline Banner](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/TaglineBanner.png)
 
-# Relocate: We Make Moving Easier!
+# Relocate.
 
 *Relocate is a hub for all things you need when you're moving. This app makes an overwhelming experience more seamless and less stressful. Giving you peace of mind every step of the way. 
 
