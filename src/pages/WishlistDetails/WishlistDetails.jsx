@@ -48,12 +48,15 @@ const WishlistDetails = (props) => {
       <section>
         <h1 className={styles.addItem}>Add Wishlist Item</h1>
         <NewWish handleAddItem={handleAddItem} />
-        <WishItems
-          wishlistId={id}
-          user={props.user} 
-          items={wishlist.wishlistItems} 
-          handleDeleteItem={handleDeleteItem} 
-        />
+        <div className={styles.itemCard}>
+          <WishItems
+            wishlistId={id}
+            user={props.user} 
+            items={wishlist.wishlistItems} 
+            handleDeleteItem={handleDeleteItem} 
+            
+          />
+        </div>
       </section>
     </main>
     :
