@@ -2,7 +2,8 @@
   gap: 14px;
   width: 100%;
   display: grid;
-  padding: 21px;
+  padding: 15px;
+  padding-top: 0;
   grid-template-columns: repeat(1, 1fr);
   text-align: center;
 }
@@ -25,3 +26,12 @@
   }
 }
 
+.wishlistBanner {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 75%;
+  margin-bottom: 1rem;
+}
