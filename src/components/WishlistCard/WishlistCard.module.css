@@ -1,3 +1,14 @@
 Link {
   color: #7E8E65;
 }
+
+.fullContainer {
+  width: 80%; 
+}
+
+p{
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  color: #DB5D0F;
+  text-align: left;
+}

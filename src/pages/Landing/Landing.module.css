@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.signup, .account {
+  text-align: center;
+}
+
 .shelf {
   display: flex;
   width: 90%;
@@ -18,10 +22,21 @@ h2 {
 
 .tag {
   color:#7E8E65;
+  font-family: lust-script,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.addTag {
+  font-family: oscine,sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .loginDiv, .signupDiv{
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom:0;
 }
 
 .phone {
@@ -61,4 +76,61 @@ h3 {
 .explore {
   text-align: right;
   color: #7E8E65;
+}
+
+.packing {
+  width: 80%;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.buttonContainer {
+  width: 70%;
+}
+
+button {
+  margin-top: 0;
+  margin-bottom: 1rem; 
+  color: white;
+}
+
+.boxContents {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutImg {
+  float: right; 
+  width: 50%;
+  padding-top: .5rem;
+}
+
+.teamlogo{
+  float:left;
+  width: 50%;
+  margin-left: .5rem;
+}
+
+.aboutHeader, .mttHeader, .featuresHead {
+  padding-top: 1.5rem;
+  margin-bottom: 0;
+  font-family: lust-script,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.aboutInfo {
+  padding-bottom: 0;
+}
+
+.featuresImg {
+  float: right; 
+  width: 60%;
+  padding-top: 2rem;
 }

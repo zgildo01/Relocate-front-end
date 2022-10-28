@@ -1,9 +1,15 @@
 import TodoCard from '../../components/TodoCard/TodoCard'
 import styles from './TodoLists.module.css'
+import todoListBanner from '../../assets/todo-list-banner.png'
+
 
 const TodoLists = (props) => {
   return (
-    props.todolists ?
+    <>
+    <div className={styles.todoBanner}>
+      <img src={todoListBanner} alt=""/>
+    </div>
+    {props.todolists ?
       <main className={styles.container}>
         {props.todolists?.map((todolist) => (
           <TodoCard 
@@ -16,6 +22,8 @@ const TodoLists = (props) => {
       <>
         <h1>Loading...</h1>
       </>
+    }
+    </>
   )
 }
 

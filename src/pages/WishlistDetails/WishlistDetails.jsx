@@ -6,6 +6,7 @@ import * as wishlistService from '../../services/wishlistService'
 import NewWish from "../../components/NewWish/NewWish"
 import WishItems from "../../components/WishItems/WishItems"
 
+
 const WishlistDetails = (props) => {
   const { id } = useParams()
   const [wishlist, setWishlist] = useState(null)
@@ -34,10 +35,9 @@ const WishlistDetails = (props) => {
       <main className={styles.container}>
       <article>
         <header>
-          <h1>Wish Lists</h1>
-          <h2>{wishlist.name}</h2>
+          <h2 className={styles.listName}>{wishlist.name}</h2>
         </header>
-        <p>{wishlist.details}</p>
+        <p className={styles.details}>{wishlist.details}</p>
         <Link to={`/wishlists/${id}/edit`} state={wishlist}>
           <button className="button-3">Edit</button>
         </Link>
@@ -46,14 +46,17 @@ const WishlistDetails = (props) => {
         </button>
       </article>
       <section>
-        <h1>Wishlist Items</h1>
+        <h1 className={styles.addItem}>Add Wishlist Item</h1>
         <NewWish handleAddItem={handleAddItem} />
-        <WishItems
-          wishlistId={id}
-          user={props.user} 
-          items={wishlist.wishlistItems} 
-          handleDeleteItem={handleDeleteItem} 
-        />
+        <div className={styles.itemCard}>
+          <WishItems
+            wishlistId={id}
+            user={props.user} 
+            items={wishlist.wishlistItems} 
+            handleDeleteItem={handleDeleteItem} 
+            
+          />
+        </div>
       </section>
     </main>
     :

@@ -48,3 +48,36 @@
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
+
+.formContainer {
+  width: 80%;
+}
+
+.container {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+.todoBanner {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 75%;
+  margin-bottom: 1rem;
+}
+
+.wishlistButton {
+  margin-top: 1rem;
+}

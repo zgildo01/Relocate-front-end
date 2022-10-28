@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import styles from './LoginForm.module.css'
 import * as authService from '../../services/authService'
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
+
 
 
 const LoginForm = props => {
@@ -64,9 +64,9 @@ const LoginForm = props => {
         />
       </div>
       <div className={styles.buttonContainer}>
-        <Button  type="submit" variant="contained" className={styles.button}>Log In</Button>
+        <button  type="submit" variant="contained" className={styles.button}>Log In</button>
         <Link to="/">
-          <Button variant="contained" className={styles.button}>Cancel</Button>
+          <button variant="contained" className={styles.button}>Cancel</button>
         </Link>
       </div>
     </form>

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from './NewWish.module.css'
 
+
 const NewWish = (props) => {
   const [form, setForm] = useState({
     price: '',

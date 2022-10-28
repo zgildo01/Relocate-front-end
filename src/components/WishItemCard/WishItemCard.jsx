@@ -1,20 +1,25 @@
 import styles from './WishItemCard.module.css'
+import Box from '@mui/material/Box'
+import Paper from '@mui/material/Paper'
 
 const CommentCard = ({ item, wishlistId, user, handleDeleteItem }) => {
   return (
-    <article className={styles.wishItems}>
-      <p>{item.purchased}</p>
-      <p>{item.price}$</p>
-      <p>{item.name}</p>
-      <p>{item.height} inches tall</p>
-      <p>{item.width} inches wide</p>
-      <p>{item.length} inches long</p>
-      <a href={item.linkToItem}>Item</a>
-      <img src={item.photo} alt={item.name} style={{ height: "50%", width: "50%" }}/>
-			<button onClick={()=> handleDeleteItem(wishlistId, item._id)} className="button-3">
-        DELETE
-      </button>
-    </article>
+    <Box className={styles.wishItems}>
+      <Paper elevation={3}>
+      <img className={styles.itemImage} src={item.photo} alt={item.name} style={{ height: "70%", width: "40%" }}/>
+        <div className={styles.itemInfo}>
+          <h5>{item.name}</h5>
+          <p className={styles.price}><b>Price:</b> ${item.price}</p>
+          <p className={styles.height}> <b>Height:</b> {item.height} inches</p>
+          <p className={styles.width}><b>Width:</b> {item.width} inches </p>
+          <p className={styles.length}><b>Length:</b> {item.length} inches </p>
+          <a href={item.linkToItem}><b>Link to Item</b></a>
+        </div>
+        <button onClick={()=> handleDeleteItem(wishlistId, item._id)} className={styles.deleteButton}>
+            DELETE
+          </button>
+      </Paper>
+    </Box>
   )
 }
 

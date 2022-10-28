@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -96,11 +95,11 @@ const SignupForm = props => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <Button type="submit" variant="contained" disabled={isFormInvalid()} className={styles.button}>
+        <button type="submit" variant="contained" disabled={isFormInvalid()} className={styles.button}>
           Sign Up
-        </Button>
+        </button>
         <Link to="/">
-          <Button variant="contained">Cancel</Button>
+          <button variant="contained">Cancel</button>
         </Link>
       </div>
     </form>

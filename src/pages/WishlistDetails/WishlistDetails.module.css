@@ -1,3 +1,25 @@
+.itemCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .container {
+  text-align: center;
+}
+
+.listName {
+  font-family: lust-script,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F5124;
+}
+
+.addItem {
+  color:#DB5D0F;
+}
+
+.details {
   text-align: center;
 }

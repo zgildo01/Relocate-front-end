@@ -53,3 +53,15 @@
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
+
+h1 {
+  font-family: lust-script,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: oscine,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './NewTodo.module.css'
+import TextField from '@mui/material/TextField'
 
 const NewTodo = (props) => {
   const [form, setForm] = useState({ name:'' })
@@ -16,14 +17,18 @@ const NewTodo = (props) => {
 
 return (
   <form className={styles.container} onSubmit={handleSubmit}>
-    <textarea 
+    <TextField
       required
+      className={styles.inputNewTodo}
       type= "text"
       name="name"
       id="text-input"
       value={form.name}
-      placeholder="Add a To-do"
-      onChange={handleChange} />
+      label="Add a To-do"
+      onChange={handleChange} 
+      variant="filled"
+      multiline
+      row={6}/>
       <button type="submit" className="button-3">Create New To-do</button>
   </form> 
   )
