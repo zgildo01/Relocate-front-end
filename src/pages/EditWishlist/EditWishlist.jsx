@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import styles from './EditWishlist.module.css'
+import Box from '@mui/material/Box'
+import Paper from '@mui/material/Paper'
+import TextField from '@mui/material/TextField'
 
 const EditWishlist = (props) => {
   const { state } = useLocation()
