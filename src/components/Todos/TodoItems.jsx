@@ -11,6 +11,7 @@ const TodoItems = (props) => {
     <>
     <section id={styles.columns}>
       <section id={styles.left}>
+        <h1 className={styles.completeHeader}>Completed Tasks</h1>
         {done.map((item) =>
           <TodoItemCard
             key={item._id}
@@ -23,6 +24,7 @@ const TodoItems = (props) => {
         )}
       </section>
       <section id={styles.right}>
+        <h1 className={styles.pendingHeader}>Still Pending</h1>
         {notDone.map((item) =>
           <TodoItemCard
             key={item._id}
