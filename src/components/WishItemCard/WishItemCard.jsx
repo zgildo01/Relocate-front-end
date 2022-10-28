@@ -12,7 +12,7 @@ const CommentCard = ({ item, wishlistId, user, handleDeleteItem }) => {
           <p className={styles.price}><b>Price:</b> ${item.price}</p>
           <p className={styles.height}> <b>Height:</b> {item.height} inches</p>
           <p className={styles.width}><b>Width:</b> {item.width} inches </p>
-          <p className={styles.length}><b>Length:</b> {item.length} inches </p>
+          <p className={styles.length}><b>Depth:</b> {item.length} inches </p>
           <a href={item.linkToItem}><b>Link to Item</b></a>
         </div>
         <button onClick={()=> handleDeleteItem(wishlistId, item._id)} className={styles.deleteButton}>

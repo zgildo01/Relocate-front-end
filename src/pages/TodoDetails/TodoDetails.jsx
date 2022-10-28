@@ -55,8 +55,8 @@ const TodoDetails = (props) => {
         <h1>Todolist Items</h1>
         <NewTodo handleAddTodo={handleAddTodo} />
         <div className={styles.taskListHeaders}>
-          <p>Finished Tasks</p>
-          <p>Still Pending</p>
+          {/* <p>Finished Tasks</p>
+          <p>Still Pending</p> */}
         </div>
         <TodoItems 
           todolistId={id}
