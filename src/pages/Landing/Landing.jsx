@@ -4,7 +4,6 @@ import Shelflogo from '../../assets/ShelfLogo.png'
 import mockupRelocate from '../../assets/mockupRelocate.png'
 import packing from '../../assets/packing.png'
 
-import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 
@@ -59,7 +58,7 @@ const Landing = ({ user }) => {
         <div className={styles.choices}>
           <div className={styles.loginDiv}>
             <p>Already have an account?</p>
-            <Button variant='contained' size="small"><Link to="/login">Log In</Link></Button>
+            <button variant='contained' size="small"><Link to="/login">Log In</Link></button>
           </div>
 
           <img 
@@ -68,7 +67,7 @@ const Landing = ({ user }) => {
 
           <div className={styles.signupDiv}>
             <p>New to Relocate?</p>
-            <Button variant='contained' size="small"><Link to="/signup">Sign Up</Link></Button>
+            <button variant='contained' size="small"><Link to="/signup">Sign Up</Link></button>
           </div>
         </div>
 
