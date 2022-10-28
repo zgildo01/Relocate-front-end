@@ -1,7 +1,15 @@
+![Tagline Banner](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/TaglineBanner.png)
 
-# Relocate: We Make Moving Easier!
+# Relocate.
 
-*Relocate is an app that seeks to organize the moving experience so users are able to worry less, enjoy more, and have peace of mind every step of the way. Our goal is to make one of the most stressful times in ones life that much easier with some simple organizational tools!*
+*Relocate is a hub for all things you need when you're moving. This app makes an overwhelming experience more seamless and less stressful. Giving you peace of mind every step of the way. 
+
+**Worry Less. Enjoy More.**
+
+*We make moving easier.*
+
+![Relocate App Screenshots](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/AppView1.png)
+![Relocate App Screenshots 2](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/AppView2.png)
 
 ## Contributors: 
 - Zeus Zaragoza-Gildo
@@ -28,6 +36,7 @@
 - Clicking on the menu button in the top right corner opens up the user settings menu in order to change their password, view their lists, create new lists, or log out.
 
 ## Design Guidelines:
+![Design Guidelines](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/DesignGuidelines.png)
 
 ## Technologies:
 
