@@ -76,7 +76,7 @@ const NewWish = (props) => {
           placeholder={0}
           onChange={handleChange}
         />
-        <label htmlFor="length-input">Item Length (inches)</label>
+        <label htmlFor="length-input">Item Depth (inches)</label>
         <input
           required
           type="number"

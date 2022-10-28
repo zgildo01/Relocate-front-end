@@ -98,13 +98,14 @@ const Landing = ({ user }) => {
         <Box className={styles.features}> 
           <Paper>
             <h3 className={styles.featuresHead}>Features</h3>
-            <img src={featuresImg} alt="features graphic" className={styles.featuresImg} />
+            <div className={styles.featuresImg} >
+              <img src={featuresImg} alt="features graphic" />
+            </div>
             <p>Relocate. allows you to:</p>
             <div className='features-list'>
               <ul>
                 <li>Track to-do lists for your apartment</li>
-                <li>Create a wish list</li>
-                <li>Upload a floor plan and add dimensions for each room</li>
+                <li>Create a wish list and add wishlist items</li>
               </ul>
             </div>
             <p>... and others.  </p>
