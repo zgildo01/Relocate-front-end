@@ -64,9 +64,9 @@ const LoginForm = props => {
         />
       </div>
       <div className={styles.buttonContainer}>
-        <Button  type="submit" variant="contained" className={styles.button}>Log In</Button>
+        <button  type="submit" variant="contained" className={styles.button}>Log In</button>
         <Link to="/">
-          <Button variant="contained" className={styles.button}>Cancel</Button>
+          <button variant="contained" className={styles.button}>Cancel</button>
         </Link>
       </div>
     </form>
