@@ -16,27 +16,35 @@ const Landing = ({ user }) => {
       <>
         <h4>Welcome, {user.name}</h4>
         <img src={packing} alt="packing" className={styles.packing}/>
-        <div className={styles.buttonContainer}>
-          <h4 id='header'>TO-DO LISTS</h4>
-          <Link
-            to="/create-todolist"
-          >
-            <button variant='contained' size="small">Create to-do list</button>
-          </Link>
-          <Link
-            to="/todolists"
-          >
-            <button variant='contained' size="small">View all lists</button>
-          </Link>
-        </div>
+        <Box className={styles.buttonContainer}>
+          <Paper elevation={3} >
+            <div className={styles.boxContents}> 
+              <h4 id='header'>TO-DO LISTS</h4>
+              <Link
+                to="/create-todolist"
+              >
+                <button variant='contained' size="small">Create to-do list</button>
+              </Link>
+              <Link
+                to="/todolists"
+              >
+                <button variant='contained' size="small">View all lists</button>
+              </Link>
+            </div>
+          </Paper>
+        </Box>
 
-        <div className={styles.buttonContainer}>
-          <h4>WISHLISTS</h4>
-            <Link to='/create-wishlist'>
-              <button variant='contained' size="small">Create wishlist</button>
-            </Link>
-            <Link to='/wishlists'><button variant='contained' size="small">View all wishlists</button></Link>
-        </div>
+        <Box className={styles.buttonContainer}>
+          <Paper elevation={3} > 
+            <div className={styles.boxContents}>
+              <h4>WISHLISTS</h4>
+                <Link to='/create-wishlist'>
+                  <button variant='contained' size="small">Create wishlist</button>
+                </Link>
+                <Link to='/wishlists'><button variant='contained' size="small">View all wishlists</button></Link>
+              </div>
+          </Paper>
+        </Box>
       </>
     :
       <>
