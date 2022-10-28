@@ -1,9 +1,19 @@
 
 # Relocate: We Make Moving Easier!
 
-Relocate is an app that seeks to organize the moving experience so users are able to worry less, enjoy more, and have peace of mind every step of the way. Our goal is to make one of the most stressful times in ones life that much easier with some simple organizational tools!
+*Relocate is an app that seeks to organize the moving experience so users are able to worry less, enjoy more, and have peace of mind every step of the way. Our goal is to make one of the most stressful times in ones life that much easier with some simple organizational tools!*
 
-## Features
+## Contributors: 
+- Zeus Zaragoza-Gildo
+- Ryan Combest
+- Steph Michael 
+
+## Planning: 
+- [Trello Board](https://trello.com/b/SostVHjx/unit-3-project)
+- [Wireframe](https://whimsical.com/unit-3-project-ByetUyNqPHoD92XoFV9Szr)
+- [ERD](https://whimsical.com/NnphE1tpQGWf2Pfb6kj87b)
+
+## Features:
 
 - Users are able to make a profile using an email and password
 - After making their profile, users are taken to a new page with the options to create a new to-do list or wishlist.
@@ -17,7 +27,9 @@ Relocate is an app that seeks to organize the moving experience so users are abl
 - If users click on the logo in the top left corner, the will be taken back to the home page.
 - Clicking on the menu button in the top right corner opens up the user settings menu in order to change their password, view their lists, create new lists, or log out.
 
-## Technologies
+## Design Guidelines:
+
+## Technologies:
 
 - Azure
 - CSS
@@ -30,7 +42,11 @@ Relocate is an app that seeks to organize the moving experience so users are abl
 - Node
 - React
 
-## Icebox Items
+## Credits: 
+- Shoutout to Anchi - her Dressup app inspired our wishlist cards and really brough our wishlist to life. 
+- TAs and IAs helped us through bugs and issues
+
+## Icebox Items🧊:
 
 - [ ] Users will be able to create, view, update, and delete a budget spreadsheet.
 - [ ] Users will be able to add different items to the budget sheet and any reference links.
