@@ -8,7 +8,7 @@
 
 *We make moving easier.*
 
-![Relocate Mockup]()
+![Relocate Mockup](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/PhoneMockupApp.png)
 ![Relocate App Screenshots](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/AppView1.png)
 ![Relocate App Screenshots 2](https://github.com/zgildo01/Relocate-front-end/blob/main/src/assets/AppView2.png)
 
