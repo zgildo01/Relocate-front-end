@@ -63,7 +63,7 @@ const TodoListForm = (props) => {
                 placeholder="To-do List Name"
                 onChange={handleChange}
               />
-              <button type="submit" className="button-3">SUBMIT</button>
+              <button type="submit" className={styles.submitButton}>SUBMIT</button>
             </form>
           </Paper>
         </Box>

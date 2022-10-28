@@ -52,7 +52,7 @@ const NewWishlist = (props) => {
                 multiline
                 rows={9}
               />
-              <button type="submit" className="button-3">Create Wishlist</button>
+              <button type="submit" className={styles.wishlistButton}>Create Wishlist</button>
             </form>
           </Paper>
         </Box>

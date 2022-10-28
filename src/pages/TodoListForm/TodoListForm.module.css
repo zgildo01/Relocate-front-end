@@ -76,3 +76,7 @@ h1 {
 img {
   width: 75%;
 }
+
+.submitButton {
+  margin-top: 1rem;
+}
