@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './ChangePasswordForm.module.css'
 import * as authService from '../../services/authService'
+import TextField from '@mui/material/TextField'
 
 const ChangePasswordForm = props => {
   const navigate = useNavigate()
@@ -46,39 +47,42 @@ const ChangePasswordForm = props => {
         <label htmlFor="password" className={styles.label}>
           Current Password
         </label>
-        <input
+        <TextField
           type="password"
           autoComplete="off"
           id="password"
           value={pw}
           name="pw"
           onChange={handleChange}
+          size="small"
         />
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="newPassword" className={styles.label}>
           New Password
         </label>
-        <input
+        <TextField
           type="password"
           autoComplete="off"
           id="newPassword"
           value={newPw}
           name="newPw"
           onChange={handleChange}
+          size="small"
         />
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="newPasswordConf" className={styles.label}>
           Confirm New Password
         </label>
-        <input
+        <TextField
           type="password"
           autoComplete="off"
           id="newPasswordConf"
           value={newPwConf}
           name="newPwConf"
           onChange={handleChange}
+          size="small"
         />
       </div>
       <div className={styles.inputContainer}>
@@ -86,7 +90,7 @@ const ChangePasswordForm = props => {
           Change Password
         </button>
         <Link to="/">
-          <button className={styles.button}>Cancel</button>
+          <button className={styles.button} variant="contained">Cancel</button>
         </Link>
       </div>
     </form>
